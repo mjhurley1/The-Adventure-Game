@@ -14,16 +14,29 @@ namespace TheAdventureGame
 
             if (choice.Equals("left"))
             {
-                Console.WriteLine("left is a good choice!");
+                Console.WriteLine("as you begin your journey, you come across a wizard. do you [talk] to him or [walk] past him?");
+                choice = Console.ReadLine();
+                if (choice.Equals("talk"))
+                {
+                    Console.WriteLine("the wizard warns you of danger");
+                }
+                else if (choice.Equals("walk"))
+                {
+                    Console.WriteLine("the wizard tells you to stop!");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice.");
+                }
             }
-           else if (choice.Equals("right"))
+            else if (choice.Equals("right"))
             {
                 Console.WriteLine("right is not a good choice!");
             }
             else if (choice.Equals("straight"))
             {
                 Console.WriteLine("straight is great!");
-            } 
+            }
             else
             {
                 Console.WriteLine("invalid choice.");
