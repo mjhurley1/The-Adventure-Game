@@ -18,11 +18,11 @@ namespace TheAdventureGame
                 choice = Console.ReadLine();
                 if (choice.Equals("talk"))
                 {
-                    Console.WriteLine("the wizard warns you of danger");
+                    Console.WriteLine("the wizard warns you of danger. do you [inquire] about the danger or ignore him and [walk] past?");
                 }
                 else if (choice.Equals("walk"))
                 {
-                    Console.WriteLine("the wizard tells you to stop!");
+                    Console.WriteLine("the wizard tells you to stop and says only death is up ahead!do you [walk] past him or [ask] about the danger");
                 }
                 else
                 {
