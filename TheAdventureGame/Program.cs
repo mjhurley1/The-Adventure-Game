@@ -29,7 +29,7 @@ namespace TheAdventureGame
                     Console.WriteLine("invalid choice.");
                 }
             }
-            else if (choice.Equals("right"))
+            else if (choice.Equals("right")) 
             {
                 Console.WriteLine("right is not a good choice!");
             }
