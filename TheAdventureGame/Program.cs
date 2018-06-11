@@ -14,19 +14,19 @@ namespace TheAdventureGame
 
             if (choice.Equals("left"))
             {
-                Console.WriteLine("as you begin your journey, you come across a wizard. do you [talk] to him or [walk] past him?");
+                Console.WriteLine("As you begin your journey, you come across a wizard. Do you [talk] to him or [walk] past him?");
                 choice = Console.ReadLine();
                 if (choice.Equals("talk"))
                 {
-                    Console.WriteLine("the wizard warns you of danger. do you [inquire] about the danger or ignore him and [walk] past?");
+                    Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [walk] past?");
                 }
                 else if (choice.Equals("walk"))
                 {
-                    Console.WriteLine("the wizard tells you to stop and says only death is up ahead!do you [walk] past him or [ask] about the danger");
+                    Console.WriteLine("The wizard tells you to stop and says only death is up ahead! Do you [walk] past him or [ask] about the danger");
                 }
                 else
                 {
-                    Console.WriteLine("invalid choice.");
+                    Console.WriteLine("Invalid Choice.");
                 }
             }
             else if (choice.Equals("right")) 
@@ -35,7 +35,7 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("straight"))
             {
-                Console.WriteLine("straight is great!");
+                Console.WriteLine("Straight is great!");
             }
             else
             {
