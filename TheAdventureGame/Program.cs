@@ -36,7 +36,7 @@ namespace TheAdventureGame
         private static void Right()
         {
             Console.WriteLine("right is not a good choice!");
-            Console.WriteLine("[Left or right]");
+            Console.WriteLine("[left or right]");
             var choice = Console.ReadLine();
             if (choice.Equals("left"))
             {
@@ -56,7 +56,7 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("forward"))
             {
-                Console.WriteLine("Good job. Youre moving forward.");
+                Console.WriteLine("Good job! Youre moving forward.");
             }
             else if (choice.Equals("right"))
             {
