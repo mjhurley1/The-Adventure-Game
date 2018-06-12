@@ -40,13 +40,43 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("left"))
             {
-                Console.WriteLine("Your walkin left");
+
+                Console.WriteLine("Your walkin left. You come across a giant spider. Do you [fight] it or [run] past it?");
+                choice = Console.ReadLine();
+                if (choice.Equals("fight"))
+                {
+                    Console.WriteLine("you are now fighting the giant spider.");
+
+                }
+                else if (choice.Equals("run"))
+                {
+                    Console.WriteLine("you run past the giant spider.");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
             else if (choice.Equals("right"))
             {
-                Console.WriteLine("your going right");
+                Console.WriteLine("your going right. you come across a nest of snakes. do you [jump] over it or [light] it on fire?");
+                choice = Console.ReadLine();
+                if (choice.Equals("jump"))
+                {
+                    Console.WriteLine("you jump over the snakes nest.");
 
-            }
+                }
+                else if (choice.Equals("light"))
+                {
+                    Console.WriteLine("you light the nest of snakes on fire");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
+
+
+            }          
         }
 
         private static void GoStraight()
