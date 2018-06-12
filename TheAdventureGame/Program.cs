@@ -14,28 +14,15 @@ namespace TheAdventureGame
 
             if (choice.Equals("left"))
             {
-                Console.WriteLine("As you begin your journey, you come across a wizard. Do you [talk] to him or [walk] past him?");
-                choice = Console.ReadLine();
-                if (choice.Equals("talk"))
-                {
-                    Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [walk] past?");
-                }
-                else if (choice.Equals("walk"))
-                {
-                    Console.WriteLine("The wizard tells you to stop and says only death is up ahead! Do you [walk] past him or [ask] about the danger");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Choice.");
-                }
+                GoLeft();
             }
-            else if (choice.Equals("right")) 
+            else if (choice.Equals("right"))
             {
-                Console.WriteLine("right is not a good choice!");
+                Right();
             }
             else if (choice.Equals("straight"))
             {
-                Console.WriteLine("Straight is great!");
+                GoStraight();
             }
             else
             {
@@ -44,6 +31,55 @@ namespace TheAdventureGame
 
             Console.ReadLine();
 
+        }
+
+        private static void Right()
+        {
+            Console.WriteLine("right is not a good choice!");
+            Console.WriteLine("[Left or right]");
+            var choice = Console.ReadLine();
+            if (choice.Equals("left"))
+            {
+                Console.WriteLine("Your walkin left");
+            }
+            else if (choice.Equals("right"))
+            {
+                Console.WriteLine("your going right");
+
+            }
+        }
+
+        private static void GoStraight()
+        {
+            Console.WriteLine("Straight is great!");
+            Console.WriteLine("[forward, or right]");
+            var choice = Console.ReadLine();
+            if (choice.Equals("forward"))
+            {
+                Console.WriteLine("Good job. Youre moving forward.");
+            }
+            else if (choice.Equals("right"))
+            {
+                Console.WriteLine("ok, now you're going right");
+            }
+        }
+
+        private static void GoLeft()
+        {
+            Console.WriteLine("As you begin your journey, you come across a wizard. Do you [talk] to him or [walk] past him?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("talk"))
+            {
+                Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [walk] past?");
+            }
+            else if (choice.Equals("walk"))
+            {
+                Console.WriteLine("The wizard tells you to stop and says only death is up ahead! Do you [walk] past him or [ask] about the danger");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Choice.");
+            }
         }
     }
 }
