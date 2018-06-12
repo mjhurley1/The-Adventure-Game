@@ -18,7 +18,7 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("right"))
             {
-                Right();
+                GoRight();
             }
             else if (choice.Equals("straight"))
             {
@@ -33,7 +33,7 @@ namespace TheAdventureGame
 
         }
 
-        private static void Right()
+        private static void GoRight()
         {
             Console.WriteLine("right is not a good choice!");
             Console.WriteLine("[left or right]");
@@ -71,10 +71,36 @@ namespace TheAdventureGame
             if (choice.Equals("talk"))
             {
                 Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [walk] past?");
+                choice = Console.ReadLine();
+                if (choice.Equals("inquire"))
+                {
+                    Console.WriteLine("you have inquired");
+                }
+                else if (choice.Equals("walk"))
+                {
+                    Console.WriteLine("you walk past");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
             else if (choice.Equals("walk"))
             {
                 Console.WriteLine("The wizard tells you to stop and says only death is up ahead! Do you [walk] past him or [ask] about the danger");
+                choice = Console.ReadLine();
+                if (choice.Equals("walk"))
+                {
+                    Console.WriteLine("you walked past");
+                }
+                else if (choice.Equals("ask"))
+                {
+                    Console.WriteLine("you ask about the danger");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
             else
             {
