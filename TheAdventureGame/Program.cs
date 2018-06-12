@@ -56,11 +56,37 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("forward"))
             {
-                Console.WriteLine("Good job! Youre moving forward.");
+                Console.WriteLine("Good job! Youre moving forward.You come across a zombie. do you [fight] or [retreat]?");
+                choice = Console.ReadLine();
+                if (choice.Equals("fight"))
+                {
+                    Console.WriteLine("you are fighting the zombie");
+                }
+                else if (choice.Equals("retreat"))
+                {
+                    Console.WriteLine("you have retreated");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
             else if (choice.Equals("right"))
             {
-                Console.WriteLine("ok, now you're going right");
+                Console.WriteLine("ok, now you're going right. you come across a dragon. do you want to [fight] it or [tame] it?");
+                choice = Console.ReadLine();
+                if (choice.Equals("fight"))
+                {
+                    Console.WriteLine("you are now fighting the dragon");
+                }
+                else if (choice.Equals("tame"))
+                {
+                    Console.WriteLine("you are now trying to tame the dragon");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
         }
 
