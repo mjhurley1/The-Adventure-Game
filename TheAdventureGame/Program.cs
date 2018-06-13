@@ -149,6 +149,23 @@ namespace TheAdventureGame
                 else if (choice.Equals("run"))
                 {
                     Console.WriteLine("you run past. after a while you come to a fork in the road. do you walk [left] or do you walk [right]");
+                    choice = Console.ReadLine();
+                    if (choice.Equals("left"))
+                    {
+                        Console.WriteLine("you walk to the left");
+                    }
+                    else if (choice.Equals("right"))
+                    {
+                        Console.WriteLine("you walk to the right");
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid choice");
+                    }
+                    
+                     
+                }
+                }
 
                 }
                 else
