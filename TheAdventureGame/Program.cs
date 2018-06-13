@@ -126,7 +126,7 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("talk"))
             {
-                Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [walk] past?");
+                Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [run] past?");
                 choice = Console.ReadLine();
                 if (choice.Equals("inquire"))
                 {
@@ -145,15 +145,16 @@ namespace TheAdventureGame
                         Console.WriteLine("invalid choice");
                     }
 
-                    } 
-                    else if (choice.Equals("walk"))
-                    {
-                        Console.WriteLine("you walk past.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("invalid choice");
-                    }
+                } 
+                else if (choice.Equals("run"))
+                {
+                    Console.WriteLine("you run past. after a while you come to a fork in the road. do you walk [left] or do you walk [right]");
+
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
             else if (choice.Equals("walk"))
             {
