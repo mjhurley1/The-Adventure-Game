@@ -30,93 +30,113 @@ namespace TheAdventureGame
             }
 
             Console.ReadLine();
-
         }
 
         private static void GoRight()
         {
             Console.WriteLine("right is not a good choice!");
-            Console.WriteLine("[left or right]");
+            Console.WriteLine("you find a ladder in the raod next to a hole.  Do you stand up the ladder and go [up] or drop [down] in the hole?");
             var choice = Console.ReadLine();
-            if (choice.Equals("left"))
+            if (choice.Equals("up"))
             {
-
-                Console.WriteLine("Your walkin left. You come across a giant spider. Do you [fight] it or [run] past it?");
-                choice = Console.ReadLine();
-                if (choice.Equals("fight"))
-                {
-                    Console.WriteLine("you are now fighting the giant spider.");
-
-                }
-                else if (choice.Equals("run"))
-                {
-                    Console.WriteLine("you run past the giant spider.");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                GoUpTheLadder();
             }
-            else if (choice.Equals("right"))
+            else if (choice.Equals("down"))
             {
-                Console.WriteLine("your going right. you come across a nest of snakes. do you [jump] over it or [light] it on fire?");
-                choice = Console.ReadLine();
-                if (choice.Equals("jump"))
-                {
-                    Console.WriteLine("you jump over the snakes nest.");
+                GoDownTheHole();
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
 
-                }
-                else if (choice.Equals("light"))
-                {
-                    Console.WriteLine("you light the nest of snakes on fire");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+        private static void GoDownTheHole()
+        {
+            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of snakes. do you [jump] over it or [light] it on fire?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("jump"))
+            {
+                Console.WriteLine("you jump over the snakes nest.");
 
+            }
+            else if (choice.Equals("light"))
+            {
+                Console.WriteLine("you light the nest of snakes on fire");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
 
-            }          
+        private static void GoUpTheLadder()
+        {
+            Console.WriteLine("You climb up the ladder to the top of an old castle. You come across a giant spider. Do you [fight] it or [run] past it?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("fight"))
+            {
+                Console.WriteLine("you are now fighting the giant spider.");
+
+            }
+            else if (choice.Equals("run"))
+            {
+                Console.WriteLine("you run past the giant spider.");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
         }
 
         private static void GoStraight()
         {
             Console.WriteLine("Straight is great!");
-            Console.WriteLine("[forward, or right]");
+            Console.WriteLine("You discover a compass that someone apparently lost. Behold! It works!  Being in the middle of the kingdom, we need to figure out if we want to travel [west] or [east]?");
             var choice = Console.ReadLine();
-            if (choice.Equals("forward"))
+            if (choice.Equals("west"))
             {
-                Console.WriteLine("Good job! Youre moving forward.You come across a zombie. do you [fight] or [retreat]?");
-                choice = Console.ReadLine();
-                if (choice.Equals("fight"))
-                {
-                    Console.WriteLine("you are fighting the zombie");
-                }
-                else if (choice.Equals("retreat"))
-                {
-                    Console.WriteLine("you have retreated");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                HeadWest();
             }
-            else if (choice.Equals("right"))
+            else if (choice.Equals("east"))
             {
-                Console.WriteLine("ok, now you're going right. you come across a dragon. do you want to [fight] it or [tame] it?");
-                choice = Console.ReadLine();
-                if (choice.Equals("fight"))
-                {
-                    Console.WriteLine("you are now fighting the dragon");
-                }
-                else if (choice.Equals("tame"))
-                {
-                    Console.WriteLine("you are now trying to tame the dragon");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+               HeadEast();
+            }
+        }
+
+        private static void HeadEast()
+        {
+            Console.WriteLine("ok, now you're headed East. You come across a dragon. Do you want to [fight] it or [tame] it?");
+           var choice = Console.ReadLine();
+            if (choice.Equals("fight"))
+            {
+                Console.WriteLine("you are now fighting the dragon");
+            }
+            else if (choice.Equals("tame"))
+            {
+                Console.WriteLine("you are now trying to tame the dragon");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
+
+        private static void HeadWest()
+        {
+            Console.WriteLine("Good job! You're heading West. You come across a zombie. do you [fight] or [retreat]?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("fight"))
+            {
+                Console.WriteLine("you are fighting the zombie");
+            }
+            else if (choice.Equals("retreat"))
+            {
+                Console.WriteLine("you have retreated");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
             }
         }
 
@@ -144,29 +164,23 @@ namespace TheAdventureGame
                     {
                         Console.WriteLine("invalid choice");
                     }
-
                 } 
                 else if (choice.Equals("run"))
                 {
-                    Console.WriteLine("you run past. after a while you come to a fork in the road. do you walk [left] or do you walk [right]");
+                    Console.WriteLine("you run past. after a while you come to a fork in the road where you can only head North or South. Do you walk [north] or do you walk [south]");
                     choice = Console.ReadLine();
-                    if (choice.Equals("left"))
+                    if (choice.Equals("north"))
                     {
-                        Console.WriteLine("you walk to the left");
+                        Console.WriteLine("you start walking to the North");
                     }
-                    else if (choice.Equals("right"))
+                    else if (choice.Equals("south"))
                     {
-                        Console.WriteLine("you walk to the right");
+                        Console.WriteLine("you start walking to the Sorth");
                     }
                     else
                     {
                         Console.WriteLine("invalid choice");
                     }
-                    
-                     
-                }
-                }
-
                 }
                 else
                 {
