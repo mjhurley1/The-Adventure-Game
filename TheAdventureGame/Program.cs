@@ -130,16 +130,30 @@ namespace TheAdventureGame
                 choice = Console.ReadLine();
                 if (choice.Equals("inquire"))
                 {
-                    Console.WriteLine("you have inquired");
-                }
-                else if (choice.Equals("walk"))
-                {
-                    Console.WriteLine("you walk past");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                    Console.WriteLine("you have inquired. Do you [heed] his warning or [ignore] and walk past?");
+                    choice = Console.ReadLine();
+                    if (choice.Equals("heed"))
+                    {
+                        Console.WriteLine("You heed his warning.");
+                    }
+                    else if (choice.Equals("ignore"))
+                    {
+                        Console.WriteLine("you ignore him and walk past.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid choice");
+                    }
+
+                    } 
+                    else if (choice.Equals("walk"))
+                    {
+                        Console.WriteLine("you walk past.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("invalid choice");
+                    }
             }
             else if (choice.Equals("walk"))
             {
