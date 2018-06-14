@@ -8,6 +8,11 @@
 - ~~In the `GoLeft()` method  > `walk` choice add a decision to "walk" and "ask"~~
 
 ## 6/14/18
-- Extract logic to methods in the `GoLeft()` method - the logic in "inquire" and "run" as separate methods
+- ~~Extract logic to methods in the `GoLeft()` method - the logic in "inquire" and "run" as separate methods~~
 - ~~In the `HeadWest()` method, add a decision when choice is "fight" and a decision when choice is "retreat"~~
-- Extract the logic you just added to methods
+- ~~Extract the logic you just added to methods~~
+- Build up current game flow
+- Spend time working with the debugger
+- Update game flow with more decisions and then implement them (question, choice, if/else - then extract)
+
+
