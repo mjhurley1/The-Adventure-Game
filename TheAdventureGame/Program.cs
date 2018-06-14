@@ -8,7 +8,7 @@ namespace TheAdventureGame
         {
             Console.WriteLine("Welcome to the Adventure Game!");
 
-            Console.WriteLine("Which way would you like to go? [left, right, or straight?]");
+            Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
 
             var choice = Console.ReadLine();
 
@@ -34,8 +34,8 @@ namespace TheAdventureGame
 
         private static void GoRight()
         {
-            Console.WriteLine("right is not a good choice!");
-            Console.WriteLine("you find a ladder in the raod next to a hole.  Do you stand up the ladder and go [up] or drop [down] in the hole?");
+            Console.WriteLine("You chose to walk to the right.");
+            Console.WriteLine("you find a ladder in the road next to a dark hole.  Do you stand the ladder up and go [up] or drop it [down] in the hole?");
             var choice = Console.ReadLine();
             if (choice.Equals("up"))
             {
@@ -53,7 +53,7 @@ namespace TheAdventureGame
 
         private static void GoDownTheHole()
         {
-            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of snakes. do you [jump] over it or [light] it on fire?");
+            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of snakes. do you [jump] over it or [light] the entire nest on fire?");
             var choice = Console.ReadLine();
             if (choice.Equals("jump"))
             {
@@ -62,7 +62,7 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("light"))
             {
-                Console.WriteLine("you light the nest of snakes on fire");
+                Console.WriteLine("you light the nest of snakes on fire and kill 'em all!");
             }
             else
             {
@@ -72,11 +72,11 @@ namespace TheAdventureGame
 
         private static void GoUpTheLadder()
         {
-            Console.WriteLine("You climb up the ladder to the top of an old castle. You come across a giant spider. Do you [fight] it or [run] past it?");
+            Console.WriteLine("You climb up the ladder to the top of an old castle. You come across a giant, hairy, black, angry spider. Do you [fight] it or [run] past it?");
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
-                Console.WriteLine("you are now fighting the giant spider.");
+                Console.WriteLine("you are now fighting the giant, stinky spider.");
 
             }
             else if (choice.Equals("run"))
@@ -150,7 +150,7 @@ namespace TheAdventureGame
                 choice = Console.ReadLine();
                 if (choice.Equals("inquire"))
                 {
-                    Console.WriteLine("you have inquired. Do you [heed] his warning or [ignore] and walk past?");
+                    Console.WriteLine("you have inquired. He tells you again about the danger up ahead. Do you [heed] his warning or [ignore] and walk past?");
                     choice = Console.ReadLine();
                     if (choice.Equals("heed"))
                     {
@@ -189,7 +189,7 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("walk"))
             {
-                Console.WriteLine("The wizard tells you to stop and says only death is up ahead! Do you [walk] past him or [ask] about the danger");
+                Console.WriteLine("The wizard tells you to stop and says only danger is up ahead! Do you [walk] past him or [ask] about the danger");
                 choice = Console.ReadLine();
                 if (choice.Equals("walk"))
                 {
