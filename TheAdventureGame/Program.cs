@@ -72,16 +72,16 @@ namespace TheAdventureGame
 
         private static void GoUpTheLadder()
         {
-            Console.WriteLine("You climb up the ladder to the top of an old castle. You come across a giant, hairy, black, angry spider. Do you [fight] it or [run] past it?");
+            Console.WriteLine("You climb up the ladder to the top and find your self standing on top of an old castle. You come across a giant, hairy, black, angry spider. Do you [fight] it or [run] past it?");
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
-                Console.WriteLine("you are now fighting the giant, stinky spider.");
+                Console.WriteLine("you are now fighting the giant, stinky angry spider.");
 
             }
             else if (choice.Equals("run"))
             {
-                Console.WriteLine("you run past the giant spider.");
+                Console.WriteLine("Holding your breath, you run past the giant, smelly, angry spider.");
             }
             else
             {
@@ -92,7 +92,7 @@ namespace TheAdventureGame
         private static void GoStraight()
         {
             Console.WriteLine("Straight is great!");
-            Console.WriteLine("You discover a compass that someone apparently lost. Behold! It works!  Being in the middle of the kingdom, we need to figure out if we want to travel [west] or [east]?");
+            Console.WriteLine("You discover an antique looking compass that someone apparently lost. Behold! It seems to work! Being in the middle of the no where, we need to figure out if we want to travel [west] or [east]?");
             var choice = Console.ReadLine();
             if (choice.Equals("west"))
             {
@@ -106,7 +106,7 @@ namespace TheAdventureGame
 
         private static void HeadEast()
         {
-            Console.WriteLine("ok, now you're headed East. You come across a dragon. Do you want to [fight] it or [tame] it?");
+            Console.WriteLine("ok, now you're headed East. You come across a rather large, fire breathing dragon. Do you want to [fight] it or [tame] it?");
            var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
