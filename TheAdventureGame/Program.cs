@@ -128,38 +128,47 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
-                Console.WriteLine("you are fighting the zombie. You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
-                choice = Console.ReadLine();
-                if (choice.Equals("forward"))
-                {
-                    Console.WriteLine("You move forward."); 
-                }
-                else if (choice.Equals("rest"))
-                {
-                    Console.WriteLine("You are resting.");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                FightZombie();
             }
-                else if (choice.Equals("retreat"))
+            else if (choice.Equals("retreat"))
             {
-                Console.WriteLine("you have retreated. You run back about 100 yards and come across a rusty sword stuck in the ground. Do you [take] the sword or [leave] it and continue west?");
-                choice = Console.ReadLine();
-                if (choice.Equals("take"))
-                {
-                    Console.WriteLine("You take the sword and continue walking.");
-                }
-                else if (choice.Equals("leave"))
-                {
-                    Console.WriteLine("You've left the sword where it is nd continue on.");
-                }
+                RetreatFromZombie();
             }
-                else
+            else
             {
                 Console.WriteLine("invalid choice");
-                
+            }
+        }
+
+        private static void RetreatFromZombie()
+        {
+            Console.WriteLine("you have retreated. You run back about 100 yards and come across a rusty sword stuck in the ground. Do you [take] the sword or [leave] it and continue west?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("take"))
+            {
+                Console.WriteLine("You take the sword and continue walking.");
+            }
+            else if (choice.Equals("leave"))
+            {
+                Console.WriteLine("You've left the sword where it is nd continue on.");
+            }
+        }
+
+        private static void FightZombie()
+        {
+            Console.WriteLine("you are fighting the zombie. You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("forward"))
+            {
+                Console.WriteLine("You move forward.");
+            }
+            else if (choice.Equals("rest"))
+            {
+                Console.WriteLine("You are resting.");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
             }
         }
 
@@ -169,67 +178,87 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("talk"))
             {
-                Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [run] past?");
-                choice = Console.ReadLine();
-                if (choice.Equals("inquire"))
-                {
-                    Console.WriteLine("you have inquired. He tells you again about the danger up ahead. Do you [heed] his warning or [ignore] and walk past?");
-                    choice = Console.ReadLine();
-                    if (choice.Equals("heed"))
-                    {
-                        Console.WriteLine("You heed his warning.");
-                    }
-                    else if (choice.Equals("ignore"))
-                    {
-                        Console.WriteLine("you ignore him and walk past.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("invalid choice");
-                    }
-                } 
-                else if (choice.Equals("run"))
-                {
-                    Console.WriteLine("you run past. after a while you come to a fork in the road where you can only head North or South. Do you walk [north] or do you walk [south]");
-                    choice = Console.ReadLine();
-                    if (choice.Equals("north"))
-                    {
-                        Console.WriteLine("you start walking to the North");
-                    }
-                    else if (choice.Equals("south"))
-                    {
-                        Console.WriteLine("you start walking to the Sorth");
-                    }
-                    else
-                    {
-                        Console.WriteLine("invalid choice");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                TalkToWizard();
             }
             else if (choice.Equals("walk"))
             {
-                Console.WriteLine("The wizard tells you to stop and says only danger is up ahead! Do you [walk] past him or [ask] about the danger");
-                choice = Console.ReadLine();
-                if (choice.Equals("walk"))
-                {
-                    Console.WriteLine("you walked past");
-                }
-                else if (choice.Equals("ask"))
-                {
-                    Console.WriteLine("you ask about the danger");
-                }
-                else
-                {
-                    Console.WriteLine("invalid choice");
-                }
+                WalkPastWizard();
             }
             else
             {
                 Console.WriteLine("Invalid Choice.");
+            }
+        }
+
+        private static void WalkPastWizard()
+        {
+            Console.WriteLine("The wizard tells you to stop and says only danger is up ahead! Do you [walk] past him or [ask] about the danger");
+            var choice = Console.ReadLine();
+            if (choice.Equals("walk"))
+            {
+                Console.WriteLine("you walked past");
+            }
+            else if (choice.Equals("ask"))
+            {
+                Console.WriteLine("you ask about the danger");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
+
+        private static void TalkToWizard()
+        {
+            Console.WriteLine("The wizard warns you of danger. Do you [inquire] about the danger or ignore him and [run] past?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("inquire"))
+            {
+                InquireAboutDanger();
+            }
+            else if (choice.Equals("run"))
+            {
+                RunPastWizard();
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
+
+        private static void RunPastWizard()
+        {
+            Console.WriteLine("you run past. after a while you come to a fork in the road where you can only head North or South. Do you walk [north] or do you walk [south]");
+            var choice = Console.ReadLine();
+            if (choice.Equals("north"))
+            {
+                Console.WriteLine("you start walking to the North");
+            }
+            else if (choice.Equals("south"))
+            {
+                Console.WriteLine("you start walking to the Sorth");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
+            }
+        }
+
+        private static void InquireAboutDanger()
+        {
+            Console.WriteLine("you have inquired. He tells you again about the danger up ahead. Do you [heed] his warning or [ignore] and walk past?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("heed"))
+            {
+                Console.WriteLine("You heed his warning.");
+            }
+            else if (choice.Equals("ignore"))
+            {
+                Console.WriteLine("you ignore him and walk past.");
+            }
+            else
+            {
+                Console.WriteLine("invalid choice");
             }
         }
     }
