@@ -129,14 +129,37 @@ namespace TheAdventureGame
             if (choice.Equals("fight"))
             {
                 Console.WriteLine("you are fighting the zombie. You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
+                choice = Console.ReadLine();
+                if (choice.Equals("forward"))
+                {
+                    Console.WriteLine("You move forward."); 
+                }
+                else if (choice.Equals("rest"))
+                {
+                    Console.WriteLine("You are resting.");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice");
+                }
             }
-            else if (choice.Equals("retreat"))
+                else if (choice.Equals("retreat"))
             {
                 Console.WriteLine("you have retreated. You run back about 100 yards and come across a rusty sword stuck in the ground. Do you [take] the sword or [leave] it and continue west?");
+                choice = Console.ReadLine();
+                if (choice.Equals("take"))
+                {
+                    Console.WriteLine("You take the sword and continue walking.");
+                }
+                else if (choice.Equals("leave"))
+                {
+                    Console.WriteLine("You've left the sword where it is nd continue on.");
+                }
             }
-            else
+                else
             {
                 Console.WriteLine("invalid choice");
+                
             }
         }
 

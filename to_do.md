@@ -9,5 +9,5 @@
 
 ## 6/14/18
 - Extract logic to methods in the `GoLeft()` method - the logic in "inquire" and "run" as separate methods
-- In the `HeadWest()` method, add a decision when choice is "fight" and a decision when choice is "retreat"
+- ~~In the `HeadWest()` method, add a decision when choice is "fight" and a decision when choice is "retreat"~~
 - Extract the logic you just added to methods
