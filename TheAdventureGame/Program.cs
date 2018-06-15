@@ -76,12 +76,25 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
-                Console.WriteLine("you are now fighting the giant, stinky angry spider.");
-
+                Console.WriteLine("you are now fighting the giant, stinky angry spider. After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
             }
             else if (choice.Equals("run"))
             {
-                Console.WriteLine("Holding your breath, you run past the giant, smelly, angry spider.");
+                Console.WriteLine("Holding your breath, you run past the giant, smelly, angry spider. You run until you're out of breath. You slow down to a walk and find a piece of folded up paper. Do you [pick] it up or keep [walking] down the path? ");
+                choice = Console.ReadLine();
+                if (choice.Equals("pick"))
+                {
+                    Console.WriteLine("You pick up the folded paper and unfold it");
+                }
+                else if (choice.Equals("walking"))
+                {
+                    Console.WriteLine("You leave the paper there and keep walkin.");  
+                {
+                        Console.WriteLine("invalid choice");
+                    }
+                }
+                    }
+                }
             }
             else
             {
