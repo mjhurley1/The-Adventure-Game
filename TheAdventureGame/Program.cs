@@ -1,14 +1,20 @@
 ﻿using System;
+using TheAdventureGame.Models;
 
 namespace TheAdventureGame
 {
     class Program
-    {
+    {    
+        private static Player PlayerOne { get; set; }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to a Rediculously Boring and Lame Adventure!");
+            CharcterCreation();
 
-            Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
+            Console.WriteLine("Welcome to a Rediculously Boring and Lame Adventure, " + PlayerOne.Name + "!");
+            Console.WriteLine("You have chosen to be a " + PlayerOne.CharacterClass);
+
+            Console.WriteLine("You're standing on a road with your trusty " + PlayerOne.Weapon.Name + " and three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
 
             var choice = Console.ReadLine();
 
@@ -30,6 +36,19 @@ namespace TheAdventureGame
             }
 
             Console.ReadLine();
+        }
+
+        private static void CharcterCreation()
+        {
+            PlayerOne = new Player();
+            Console.WriteLine("What is your name?");
+            PlayerOne.Name = Console.ReadLine();
+            Console.WriteLine("What is your class? Are you a warrior, wizard, or elf?");
+            PlayerOne.CharacterClass = Console.ReadLine();
+            PlayerOne.Weapon = new Weapon();
+            PlayerOne.Weapon.Name = "sword";
+            PlayerOne.Weapon.Damage = 2;
+            PlayerOne.Health = 20;
         }
 
         private static void GoRight()
@@ -144,22 +163,9 @@ namespace TheAdventureGame
             Console.WriteLine("ok, now you're headed East. You come across a rather large, fire breathing dragon. Do you want to [fight] it or [tame] it?");
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
-            { 
-                    Console.WriteLine("you are now fighting the dragon. You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
-                choice = Console.ReadLine();
-                if (choice.Equals("sleep"))
-                {
-                    Console.WriteLine("You are now sleeping.");
-                }
-                else if (choice.Equals("moving"))
-                {
-                    Console.WriteLine("You keep moving down the path.");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice. You died.");
-                }
-            }   
+            {
+                FightTheDragon();
+            }
 
             else if (choice.Equals("tame"))
             {
@@ -168,6 +174,24 @@ namespace TheAdventureGame
             else
             {
                 Console.WriteLine("invalid choice. You died.");
+            }
+        }
+
+        private static void FightTheDragon()
+        {
+            Console.WriteLine("you are now fighting the dragon. You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("sleep"))
+            {
+                Console.WriteLine("You are now sleeping.");
+            }
+            else if (choice.Equals("moving"))
+            {
+                Console.WriteLine("You keep moving down the path.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
