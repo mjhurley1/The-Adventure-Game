@@ -6,7 +6,7 @@ namespace TheAdventureGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to a Rediculously Lame Adventure!");
+            Console.WriteLine("Welcome to a Rediculously Boring and Lame Adventure!");
 
             Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
 
