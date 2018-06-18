@@ -142,11 +142,25 @@ namespace TheAdventureGame
         private static void HeadEast()
         {
             Console.WriteLine("ok, now you're headed East. You come across a rather large, fire breathing dragon. Do you want to [fight] it or [tame] it?");
-           var choice = Console.ReadLine();
+            var choice = Console.ReadLine();
             if (choice.Equals("fight"))
-            {
-                Console.WriteLine("you are now fighting the dragon");
-            }
+            { 
+                    Console.WriteLine("you are now fighting the dragon. You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
+                choice = Console.ReadLine();
+                if (choice.Equals("sleep"))
+                {
+                    Console.WriteLine("You are now sleeping.");
+                }
+                else if (choice.Equals("moving"))
+                {
+                    Console.WriteLine("You keep moving down the path.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. You died.");
+                }
+            }   
+
             else if (choice.Equals("tame"))
             {
                 Console.WriteLine("you are now trying to tame the dragon");
