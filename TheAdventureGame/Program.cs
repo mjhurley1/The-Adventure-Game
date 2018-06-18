@@ -6,7 +6,7 @@ namespace TheAdventureGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Adventure Game!");
+            Console.WriteLine("Welcome to a Rediculously Lame Adventure!");
 
             Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
 
@@ -26,7 +26,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice.");
+                Console.WriteLine("invalid choice. You died.");
             }
 
             Console.ReadLine();
@@ -47,7 +47,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -66,7 +66,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -84,7 +84,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -102,7 +102,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -120,7 +120,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -153,7 +153,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -171,7 +171,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -203,7 +203,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -221,7 +221,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("Invalid Choice.");
+                Console.WriteLine("Invalid Choice. You died.");
             }
         }
 
@@ -239,7 +239,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -257,7 +257,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -275,7 +275,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
 
@@ -293,7 +293,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice");
+                Console.WriteLine("invalid choice. You died.");
             }
         }
     }
