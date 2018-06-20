@@ -80,24 +80,7 @@ namespace TheAdventureGame
                 choice = Console.ReadLine();
                 if (choice.Equals("ascend"))
                 {
-                    Console.WriteLine("You decide to go up the staircase. At the top you come to a locked door straight ahead and a hallway to the left and to the right? Do you [bust] open the door ahead or walk [leftmost] or go [rightmost]down another hallway?");
-                    choice = Console.ReadLine();
-                    if (choice.Equals("bust"))
-                    {
-                        Console.WriteLine("You bust down the door.");
-                    }
-                    else if (choice.Equals("leftmost"))
-                    {
-                        Console.WriteLine("You decide to walk down the left hallway.");
-                    }
-                    else if (choice.Equals("rightmost"))
-                    {
-                        Console.WriteLine("You decide to walk down the right hallway");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid choice. You died.");
-                    }
+                    AscendStairs();
                 }
                 else if (choice.Equals("descend"))
                 {
@@ -110,7 +93,7 @@ namespace TheAdventureGame
                 }
             else if (choice.Equals("light"))
             {
-                Console.WriteLine("you light the nest of snakes on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread]on down the path?");
+                Console.WriteLine("you light the nest of snakes on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread] on down the path?");
                 choice = Console.ReadLine();
                 if (choice.Equals("enter"))
                 {
@@ -118,20 +101,7 @@ namespace TheAdventureGame
                 }
                 else if (choice.Equals("tread"))
                 {
-                    Console.WriteLine("You decide to not enter the cave.Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
-                    choice = Console.ReadLine();
-                    if (choice.Equals("kill"))
-                    {
-                        Console.WriteLine("You kill the giant scorpion.");
-                    }
-                    else if (choice.Equals("scamper"))
-                    {
-                        Console.WriteLine("You scamper past the giant scorpion");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid choice. You died.");
-                    }
+                    TreadDownPath();
                 }
                 else
                 {
@@ -141,6 +111,46 @@ namespace TheAdventureGame
             else
             {
                 Console.WriteLine("invalid choice. You died.");
+            }
+        }
+
+        private static void AscendStairs()
+        {
+            Console.WriteLine("You decide to go up the staircase. At the top you come to a locked door straight ahead and a hallway to the left and to the right? Do you [bust] open the door ahead or walk [leftmost] or go [rightmost]down another hallway?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("bust"))
+            {
+                Console.WriteLine("You bust down the door.");
+            }
+            else if (choice.Equals("leftmost"))
+            {
+                Console.WriteLine("You decide to walk down the left hallway.");
+            }
+            else if (choice.Equals("rightmost"))
+            {
+                Console.WriteLine("You decide to walk down the right hallway");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. You died.");
+            }
+        }
+
+        private static void TreadDownPath()
+        {
+            Console.WriteLine("You decide to not enter the cave.Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("kill"))
+            {
+                Console.WriteLine("You kill the giant scorpion.");
+            }
+            else if (choice.Equals("scamper"))
+            {
+                Console.WriteLine("You scamper past the giant scorpion");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
