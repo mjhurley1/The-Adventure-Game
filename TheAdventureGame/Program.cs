@@ -77,8 +77,20 @@ namespace TheAdventureGame
             if (choice.Equals("jump"))
             {
                 Console.WriteLine("you jump over the snakes nest.You lans safely and continue walking until you come to an old wooden staircase. Do you [ascend] the stairs or [descend] the stairs?");
-
-            }
+                choice = Console.ReadLine();
+                if (choice.Equals("ascend"))
+                {
+                    Console.WriteLine("You decide to go up the staircase");
+                }
+                else if (choice.Equals("descend"))
+                {
+                    Console.WriteLine("You choose to go down the staircase");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. You died.");
+                }
+                }
             else if (choice.Equals("light"))
             {
                 Console.WriteLine("you light the nest of snakes on fire and kill 'em all!");
