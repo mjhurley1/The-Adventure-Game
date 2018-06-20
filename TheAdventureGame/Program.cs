@@ -144,6 +144,12 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("kill"))
             {
+                //create the scorpion object
+                //call the battleservice fight method - pass in PlayerOne and the scorpion you just created
+                //check the result
+                //if you won continue
+                //else you died end game
+
                 Console.WriteLine("You kill the giant scorpion.");
             }
             else if (choice.Equals("scamper"))
@@ -178,21 +184,41 @@ namespace TheAdventureGame
         {
             Console.WriteLine("you are now fighting the giant, stinky angry spider.");
 
-
-
-            Console.WriteLine("After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
-            var choice = Console.ReadLine();
-            if (choice.Equals("rest"))
+            var spider = new Enemy
             {
-                Console.WriteLine("Your resting.");
-            }
-            else if (choice.Equals("strolling"))
+                Name = "The Angry Spider",
+                EnemyClass = "spider",
+                Health = 7,
+                Weapon = new Weapon
+                {
+                    Name = "fangs",
+                    Damage = 3
+                }
+            };
+
+            var result = _battleService.Fight(PlayerOne, spider);
+
+            if (result.Equals(BattleResult.PlayerWon))
             {
-                Console.WriteLine("You are now strolling.");
+                Console.WriteLine("You killed the spider.");
+                Console.WriteLine("After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
+                var choice = Console.ReadLine();
+                if (choice.Equals("rest"))
+                {
+                    Console.WriteLine("Your resting.");
+                }
+                else if (choice.Equals("strolling"))
+                {
+                    Console.WriteLine("You are now strolling.");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice. You died.");
+                }
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("You died. Game over.");
             }
         }
 
@@ -250,7 +276,15 @@ namespace TheAdventureGame
 
         private static void FightTheDragon()
         {
-            Console.WriteLine("you are now fighting the dragon. You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
+            Console.WriteLine("you are now fighting the dragon. ");
+
+            //create the dragon object
+            //call the battleservice fight method - pass in PlayerOne and the dragon you just created
+            //check the result
+            //if you won continu
+            //else you died end game
+
+            Console.WriteLine("You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
             var choice = Console.ReadLine();
             if (choice.Equals("sleep"))
             {
@@ -304,7 +338,7 @@ namespace TheAdventureGame
             {
                 Name = "Keith",
                 EnemyClass = "Zombie",
-                Health = 50,
+                Health = 10,
                 Weapon = new Weapon
                 {
                     Name = "Fists",
