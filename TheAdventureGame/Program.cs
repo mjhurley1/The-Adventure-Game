@@ -119,6 +119,19 @@ namespace TheAdventureGame
                 else if (choice.Equals("tread"))
                 {
                     Console.WriteLine("You decide to not enter the cave.Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
+                    choice = Console.ReadLine();
+                    if (choice.Equals("kill"))
+                    {
+                        Console.WriteLine("You kill the giant scorpion.");
+                    }
+                    else if (choice.Equals("scamper"))
+                    {
+                        Console.WriteLine("You scamper past the giant scorpion");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid choice. You died.");
+                    }
                 }
                 else
                 {
