@@ -94,7 +94,19 @@ namespace TheAdventureGame
             else if (choice.Equals("light"))
             {
                 Console.WriteLine("you light the nest of snakes on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread]on down the path?");
-
+                choice = Console.ReadLine();
+                if (choice.Equals("enter"))
+                {
+                    Console.WriteLine("You have entered the dark cave.");
+                }
+                else if (choice.Equals("tread"))
+                {
+                    Console.WriteLine("You decide to not enter the cave.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. You died.");
+                }
             }
             else
             {
