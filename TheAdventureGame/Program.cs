@@ -118,7 +118,7 @@ namespace TheAdventureGame
                 }
                 else if (choice.Equals("tread"))
                 {
-                    Console.WriteLine("You decide to not enter the cave.");
+                    Console.WriteLine("You decide to not enter the cave.Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
                 }
                 else
                 {
