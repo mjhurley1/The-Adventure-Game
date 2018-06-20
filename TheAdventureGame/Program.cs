@@ -81,6 +81,23 @@ namespace TheAdventureGame
                 if (choice.Equals("ascend"))
                 {
                     Console.WriteLine("You decide to go up the staircase. At the top you come to a locked door straight ahead and a hallway to the left and to the right? Do you [bust] open the door ahead or walk [leftmost] or go [rightmost]down another hallway?");
+                    choice = Console.ReadLine();
+                    if (choice.Equals("bust"))
+                    {
+                        Console.WriteLine("You bust down the door.");
+                    }
+                    else if (choice.Equals("leftmost"))
+                    {
+                        Console.WriteLine("You decide to walk down the left hallway.");
+                    }
+                    else if (choice.Equals("rightmost"))
+                    {
+                        Console.WriteLine("You decide to walk down the right hallway");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid choice. You died.");
+                    }
                 }
                 else if (choice.Equals("descend"))
                 {
