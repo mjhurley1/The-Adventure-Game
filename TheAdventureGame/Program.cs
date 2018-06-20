@@ -1,10 +1,12 @@
 ﻿using System;
 using TheAdventureGame.Models;
+using TheAdventureGame.Services;
 
 namespace TheAdventureGame
 {
     class Program
-    {    
+    {
+        private static BattleService _battleService = new BattleService();
         private static Player PlayerOne { get; set; }
 
         static void Main(string[] args)
@@ -294,7 +296,30 @@ namespace TheAdventureGame
 
         private static void FightZombie()
         {
-            Console.WriteLine("you are fighting the zombie. You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
+            var zombie = new Enemy
+            {
+                Name = "Keith",
+                EnemyClass = "Zombie",
+                Health = 5,
+                Weapon = new Weapon
+                {
+                    Name = "Fists",
+                    Damage = 1
+                }
+            };
+
+            Console.WriteLine("you are fighting the " + zombie.EnemyClass + " named " + zombie.Name + ". The zombie's weapon is its " + zombie.Weapon.Name);
+            var result = _battleService.Fight(PlayerOne, zombie);
+            if (result.Equals(BattleResult.PlayerWon))
+            {
+                Console.WriteLine("You killed the zombie.");
+            }
+            else
+            {
+                Console.WriteLine("The zombie killed you! Your game is now over.");
+            }
+
+            Console.WriteLine ("You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
             var choice = Console.ReadLine();
             if (choice.Equals("forward"))
             {
