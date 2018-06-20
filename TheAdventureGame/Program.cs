@@ -176,7 +176,11 @@ namespace TheAdventureGame
 
         private static void FightTheSpider()
         {
-            Console.WriteLine("you are now fighting the giant, stinky angry spider. After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
+            Console.WriteLine("you are now fighting the giant, stinky angry spider.");
+
+
+
+            Console.WriteLine("After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
             var choice = Console.ReadLine();
             if (choice.Equals("rest"))
             {
@@ -300,7 +304,7 @@ namespace TheAdventureGame
             {
                 Name = "Keith",
                 EnemyClass = "Zombie",
-                Health = 5,
+                Health = 50,
                 Weapon = new Weapon
                 {
                     Name = "Fists",
@@ -313,25 +317,24 @@ namespace TheAdventureGame
             if (result.Equals(BattleResult.PlayerWon))
             {
                 Console.WriteLine("You killed the zombie.");
+                Console.WriteLine("You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
+                var choice = Console.ReadLine();
+                if (choice.Equals("forward"))
+                {
+                    Console.WriteLine("You move forward.");
+                }
+                else if (choice.Equals("rest"))
+                {
+                    Console.WriteLine("You are resting.");
+                }
+                else
+                {
+                    Console.WriteLine("invalid choice. You died.");
+                }
             }
             else
             {
                 Console.WriteLine("The zombie killed you! Your game is now over.");
-            }
-
-            Console.WriteLine ("You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
-            var choice = Console.ReadLine();
-            if (choice.Equals("forward"))
-            {
-                Console.WriteLine("You move forward.");
-            }
-            else if (choice.Equals("rest"))
-            {
-                Console.WriteLine("You are resting.");
-            }
-            else
-            {
-                Console.WriteLine("invalid choice. You died.");
             }
         }
 

@@ -6,7 +6,20 @@ namespace TheAdventureGame.Services
     {
         public BattleResult Fight(Player player, Enemy enemy)
         {
-            return BattleResult.PlayerWon;
+            while (true)
+            {
+                enemy.Health = enemy.Health - player.Weapon.Damage;
+                if (enemy.Health < 1)
+                {
+                    return BattleResult.PlayerWon;
+                }
+
+                player.Health = player.Health - enemy.Weapon.Damage;
+                if (player.Health < 1)
+                {
+                    return BattleResult.PlayerDied;
+                }
+            }
         }
     }
 
