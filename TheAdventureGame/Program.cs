@@ -279,7 +279,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
@@ -287,11 +287,20 @@ namespace TheAdventureGame
         {
             Console.WriteLine("you are now fighting the dragon. ");
 
-            //create the dragon object
-            //call the battleservice fight method - pass in PlayerOne and the dragon you just created
-            //check the result
-            //if you won continu
-            //else you died end game
+            var dragon = new Enemy
+            {
+                Name = "Earth Dragon",
+                EnemyClass = "dragon",
+                Health = 14,
+                Weapon = new Weapon
+                {
+                    Name = "fire breath",
+                    Damage = 7
+                }
+
+            };
+
+            var result = _battleService.Fight(PlayerOne, dragon);
 
             Console.WriteLine("You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
             var choice = Console.ReadLine();
