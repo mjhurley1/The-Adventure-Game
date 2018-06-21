@@ -297,10 +297,8 @@ namespace TheAdventureGame
                     Name = "fire breath",
                     Damage = 7
                 }
-
             };
-
-            var result = _battleService.Fight(PlayerOne, dragon);
+                var result = _battleService.Fight(PlayerOne, dragon);
 
             Console.WriteLine("You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
             var choice = Console.ReadLine();
