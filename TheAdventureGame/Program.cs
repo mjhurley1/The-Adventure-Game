@@ -144,11 +144,20 @@ namespace TheAdventureGame
             var choice = Console.ReadLine();
             if (choice.Equals("kill"))
             {
-                //create the scorpion object
-                //call the battleservice fight method - pass in PlayerOne and the scorpion you just created
-                //check the result
-                //if you won continue
-                //else you died end game
+                var scorpion = new Enemy
+                {
+                    Name = "The Giant Scorpion",
+                    EnemyClass = "scorpion",
+                    Health = 8,
+                    Weapon = new Weapon
+                    {
+                        Name = "stinger",
+                        Damage = 4
+                    }
+
+                };
+
+                var result = _battleService.Fight(PlayerOne, scorpion);
 
                 Console.WriteLine("You kill the giant scorpion.");
             }
