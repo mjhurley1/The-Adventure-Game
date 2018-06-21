@@ -336,7 +336,7 @@ namespace TheAdventureGame
         {
             var zombie = new Enemy
             {
-                Name = "Keith",
+                Name = "Herman",
                 EnemyClass = "Zombie",
                 Health = 10,
                 Weapon = new Weapon
