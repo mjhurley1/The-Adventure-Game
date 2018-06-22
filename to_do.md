@@ -20,10 +20,13 @@
 - ~~Allow the enemy to have multiple weapons.
 - ~~Update the battle service fight method to use the first weapon in the list for the player and the enemy.~~
 - Find a weapon on your journey and pick it up.
-- Allow the player to chose the weapon to use on each turn in the battles service.
-- Radomize the enemy weapoin on each turn in the battle service.
+- Add a weapon to the player's list on creation.
 - Add weapon(s) to the dragon
 - Add weapon(s) to the zombie
+- Find a few weapons on your journey and add them to the player list of weapons.
 
+## 6/25/18
+- Allow the player to chose the weapon to use on each turn in the battles service.
+- Radomize the enemy weapoin on each turn in the battle service.
 
 
