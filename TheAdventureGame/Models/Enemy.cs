@@ -8,7 +8,7 @@ namespace TheAdventureGame.Models
     {
         public string Name { get; set; }
         public string EnemyClass { get; set; }
-        public Weapon Weapon { get; set; }
+        public List<Weapon> Weapons { get; set; } = new List<Weapon>();
         public int Health { get; set; }
 
     }

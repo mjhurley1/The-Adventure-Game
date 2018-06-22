@@ -1,5 +1,6 @@
 ﻿using TheAdventureGame.Models;
 using System.Linq;
+using System;
 
 namespace TheAdventureGame.Services
 {
@@ -7,17 +8,21 @@ namespace TheAdventureGame.Services
     {
         public BattleResult Fight(Player player, Enemy enemy)
         {
-            ;
+            var playerWeapon = player.Weapons.First();
+            Console.WriteLine(player.Name + " has chosen to use his/her " + playerWeapon.Name + " with damage of " + playerWeapon.Damage);
+
+            var ememyWeapon = enemy.Weapons.First();
+            Console.WriteLine(enemy.Name + " has chosen to use its " + ememyWeapon.Name + " with damage of " + ememyWeapon.Damage);
+
             while (true)
             {
-                var currentWeapon = player.Weapons.First();
-                enemy.Health = enemy.Health - currentWeapon.Damage;
+                enemy.Health = enemy.Health - playerWeapon.Damage;
                 if (enemy.Health < 1)
                 {
                     return BattleResult.PlayerWon;
                 }
 
-                player.Health = player.Health - enemy.Weapon.Damage;
+                player.Health = player.Health - ememyWeapon.Damage;
                 if (player.Health < 1)
                 {
                     return BattleResult.PlayerDied;

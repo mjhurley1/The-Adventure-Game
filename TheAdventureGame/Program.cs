@@ -157,13 +157,16 @@ namespace TheAdventureGame
                     Name = "The Giant Scorpion",
                     EnemyClass = "scorpion",
                     Health = 8,
-                    Weapon = new Weapon
-                    {
-                        Name = "stinger",
-                        Damage = 4
-                    }
-
                 };
+                scorpion.Weapons.Add(new Weapon {
+                    Name = "stinger",
+                    Damage = 4
+                });
+                scorpion.Weapons.Add(new Weapon
+                {
+                    Name = "claws",
+                    Damage = 3
+                });
 
                 var result = _battleService.Fight(PlayerOne, scorpion);
                 if (result.Equals(BattleResult.PlayerWon))
@@ -213,12 +216,17 @@ namespace TheAdventureGame
                 Name = "The Angry Spider",
                 EnemyClass = "spider",
                 Health = 7,
-                Weapon = new Weapon
-                {
-                    Name = "fangs",
-                    Damage = 3
-                }
             };
+            spider.Weapons.Add(new Weapon
+            {
+                Name = "fangs",
+                Damage = 3
+            });
+            spider.Weapons.Add(new Weapon
+            {
+                Name = "web",
+                Damage = 1
+            });
 
             var result = _battleService.Fight(PlayerOne, spider);
 
@@ -306,13 +314,13 @@ namespace TheAdventureGame
             {
                 Name = "Earth Dragon",
                 EnemyClass = "dragon",
-                Health = 14,
-                Weapon = new Weapon
-                {
-                    Name = "fire breath",
-                    Damage = 7
-                }
+                Health = 14
             };
+            dragon.Weapons.Add(new Weapon
+            {
+                Name = "fire breath",
+                Damage = 7
+            });
 
             var result = _battleService.Fight(PlayerOne, dragon);
 
@@ -377,19 +385,18 @@ namespace TheAdventureGame
             {
                 Name = "Herman",
                 EnemyClass = "Zombie",
-                Health = 10,
-                Weapon = new Weapon
-                {
-                    Name = "Fists",
-                    Damage = 1
-                }
+                Health = 10
             };
+            zombie.Weapons.Add(new Weapon
+            {
+                Name = "Fists",
+                Damage = 1
+            });
 
-            Console.WriteLine("you are fighting the " + zombie.EnemyClass + " named " + zombie.Name + ". The zombie's weapon is its " + zombie.Weapon.Name);
+            Console.WriteLine("you are fighting the " + zombie.EnemyClass + " named " + zombie.Name + ".");
             var result = _battleService.Fight(PlayerOne, zombie);
             if (result.Equals(BattleResult.PlayerWon))
             {
-                Console.WriteLine("You killed the zombie.");
                 Console.WriteLine("You kill the zombie. Do you continue [forward] or stop and [rest] for a little while?");
                 var choice = Console.ReadLine();
                 if (choice.Equals("forward"))
