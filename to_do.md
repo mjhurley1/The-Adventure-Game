@@ -17,9 +17,9 @@
 
 ## 6/22/18
 - ~~Allow the player to have multiple weapons.~~
-- ~~Allow the enemy to have multiple weapons.
+- ~~Allow the enemy to have multiple weapons.~~
 - ~~Update the battle service fight method to use the first weapon in the list for the player and the enemy.~~
-- Find a weapon on your journey and pick it up.
+- ~~Find a weapon on your journey and pick it up.~~
 - Add a weapon to the player's list on creation.
 - Add weapon(s) to the dragon
 - Add weapon(s) to the zombie
