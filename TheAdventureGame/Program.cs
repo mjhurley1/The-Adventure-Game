@@ -61,11 +61,37 @@ namespace TheAdventureGame
             PlayerOne.Health = 20;
         }
 
+        private static void ListWeapons()
+        {
+            Console.WriteLine("Here is your current weapon inventory:");
+            foreach(var weapon in PlayerOne.Weapons)
+            {
+                Console.WriteLine(weapon.Name);
+            }
+        }
+
         private static void GoRight()
         {
-            Console.WriteLine("You chose to walk to the right.");
-            Console.WriteLine("you find a ladder in the road next to a dark hole.  Do you stand the ladder up and go [up] or drop it [down] in the hole?");
+            Console.WriteLine("You chose to walk to the right and as you walk you come across a mace just laying there in the road. Do you want to [pick] it up or [leave] it?");
             var choice = Console.ReadLine();
+            if (choice.Equals("pick"))
+            {
+                var mace = new Weapon
+                {
+                    Name = "mace",
+                    Damage = 5
+                };
+                PlayerOne.Weapons.Add(mace);
+                Console.WriteLine("You have picked up the mace and added it to your inventory");
+                ListWeapons();
+            }
+            else
+            {
+                Console.WriteLine("Not sure why, but you left it there! Too much weapon for you?");
+            }
+
+            Console.WriteLine("you find a ladder in the road next to a dark hole.  Do you stand the ladder up and go [up] or drop it [down] in the hole?");
+            choice = Console.ReadLine();
             if (choice.Equals("up"))
             {
                 GoUpTheLadder();
@@ -420,7 +446,35 @@ namespace TheAdventureGame
 
         private static void GoLeft()
         {
-            Console.WriteLine("As you begin your journey, you come across a wizard. Do you [talk] to him or [walk] past him?");
+            Console.WriteLine("As we begin our journey, you see a battle axe stuck in the trunk of a tree.  Do you [pick] up the battle axe or [leave] it and continue on?");
+            var choice = Console.ReadLine();
+            if (choice.Equals("pick"))
+            {
+                var battleAxe = new Weapon
+                {
+                    Name = "battle axe",
+                    Damage = 4
+                };
+                PlayerOne.Weapons.Add(battleAxe);
+                Console.WriteLine("You have picked up the battle axe and added it to your inventory");
+                ListWeapons();
+            }
+            else if (choice.Equals("leave"))
+            {
+                Console.WriteLine("For some reason you don't another weapon... OK, boss.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. You're not very good at this!");
+            }
+
+            ContinueAfterBattleAxe();
+
+        }
+
+        private static void ContinueAfterBattleAxe()
+        {
+            Console.WriteLine("As you continue your journey, you come across a wizard. Do you [talk] to him or [walk] past him?");
             var choice = Console.ReadLine();
             if (choice.Equals("talk"))
             {

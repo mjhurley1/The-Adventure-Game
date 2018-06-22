@@ -24,6 +24,7 @@
 - Add weapon(s) to the dragon
 - Add weapon(s) to the zombie
 - Find a few weapons on your journey and add them to the player list of weapons.
+- Map "pick" or "leave" in `GoLeft`
 
 ## 6/25/18
 - Allow the player to chose the weapon to use on each turn in the battles service.
