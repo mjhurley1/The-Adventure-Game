@@ -158,8 +158,15 @@ namespace TheAdventureGame
                 };
 
                 var result = _battleService.Fight(PlayerOne, scorpion);
-
-                Console.WriteLine("You kill the giant scorpion.");
+                if (result.Equals(BattleResult.PlayerWon))
+                {
+                    Console.WriteLine("You kill the giant scorpion.");
+                }
+                else
+                {
+                    Console.WriteLine("The giant scorion killed you. Game over!");
+                }
+                
             }
             else if (choice.Equals("scamper"))
             {
@@ -298,21 +305,29 @@ namespace TheAdventureGame
                     Damage = 7
                 }
             };
-                var result = _battleService.Fight(PlayerOne, dragon);
 
-            Console.WriteLine("You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
-            var choice = Console.ReadLine();
-            if (choice.Equals("sleep"))
+            var result = _battleService.Fight(PlayerOne, dragon);
+
+            if (result.Equals(BattleResult.PlayerWon))
             {
-                Console.WriteLine("You are now sleeping.");
-            }
-            else if (choice.Equals("moving"))
-            {
-                Console.WriteLine("You keep moving down the path.");
+                Console.WriteLine("You finally slay it but it took a lot out of you. Do you now [sleep] or keep [moving] down the path?");
+                var choice = Console.ReadLine();
+                if (choice.Equals("sleep"))
+                {
+                    Console.WriteLine("You are now sleeping.");
+                }
+                else if (choice.Equals("moving"))
+                {
+                    Console.WriteLine("You keep moving down the path.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. You died.");
+                }
             }
             else
             {
-                Console.WriteLine("Invalid choice. You died.");
+                Console.WriteLine("The " + dragon.EnemyClass + " named " + dragon.Name + "killed you. Game over!");
             }
         }
 
