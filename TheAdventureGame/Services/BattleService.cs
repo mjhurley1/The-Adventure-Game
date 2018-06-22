@@ -1,4 +1,5 @@
 ﻿using TheAdventureGame.Models;
+using System.Linq;
 
 namespace TheAdventureGame.Services
 {
@@ -6,9 +7,11 @@ namespace TheAdventureGame.Services
     {
         public BattleResult Fight(Player player, Enemy enemy)
         {
+            ;
             while (true)
             {
-                enemy.Health = enemy.Health - player.Weapon.Damage;
+                var currentWeapon = player.Weapons.First();
+                enemy.Health = enemy.Health - currentWeapon.Damage;
                 if (enemy.Health < 1)
                 {
                     return BattleResult.PlayerWon;

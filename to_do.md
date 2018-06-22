@@ -11,8 +11,15 @@
 - ~~Extract logic to methods in the `GoLeft()` method - the logic in "inquire" and "run" as separate methods~~
 - ~~In the `HeadWest()` method, add a decision when choice is "fight" and a decision when choice is "retreat"~~
 - ~~Extract the logic you just added to methods~~
-- Build up current game flow
-- Spend time working with the debugger
-- Update game flow with more decisions and then implement them (question, choice, if/else - then extract)
+- ~~Build up current game flow~~
+- ~~Spend time working with the debugger~~
+- ~~Update game flow with more decisions and then implement them (question, choice, if/else - then extract)~~
+
+## 6/22/18
+- Allow the player to have multiple weapons.
+- Allow the enemy to have multiple weapons.
+- Update the battle service fight method to use the multiple weapons.
+- Find a weapon on your journey and pick it up.
+
 
 

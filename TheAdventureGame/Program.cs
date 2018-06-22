@@ -16,7 +16,7 @@ namespace TheAdventureGame
             Console.WriteLine("Welcome to a Rediculously Boring and Lame Adventure, " + PlayerOne.Name + "!");
             Console.WriteLine("You have chosen to be a " + PlayerOne.CharacterClass);
 
-            Console.WriteLine("You're standing on a road with your trusty " + PlayerOne.Weapon.Name + " and three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
+            Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
 
             var choice = Console.ReadLine();
 
@@ -47,9 +47,17 @@ namespace TheAdventureGame
             PlayerOne.Name = Console.ReadLine();
             Console.WriteLine("What is your class? Are you a warrior, wizard, or elf?");
             PlayerOne.CharacterClass = Console.ReadLine();
-            PlayerOne.Weapon = new Weapon();
-            PlayerOne.Weapon.Name = "sword";
-            PlayerOne.Weapon.Damage = 2;
+            PlayerOne.Weapons.Add(new Weapon
+            {
+                Name = "sword",
+                Damage = 2
+            });
+            PlayerOne.Weapons.Add(new Weapon
+            {
+                Name = "crossbow",
+                Damage = 3
+            });
+
             PlayerOne.Health = 20;
         }
 
