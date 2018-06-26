@@ -349,6 +349,11 @@ namespace TheAdventureGame
             };
             dragon.Weapons.Add(new Weapon
             {
+                Name = "Teeth",
+                Damage = 5
+            });
+            dragon.Weapons.Add(new Weapon
+            {
                 Name = "fire breath",
                 Damage = 7
             });
@@ -418,6 +423,11 @@ namespace TheAdventureGame
                 EnemyClass = "Zombie",
                 Health = 10
             };
+            zombie.Weapons.Add(new Weapon
+            {
+                Name = "Bite",
+                Damage = 4
+            });
             zombie.Weapons.Add(new Weapon
             {
                 Name = "Fists",
