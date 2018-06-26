@@ -54,6 +54,11 @@ namespace TheAdventureGame
             });
             PlayerOne.Weapons.Add(new Weapon
             {
+                Name = "war hammer",
+                Damage = 4
+            });
+            PlayerOne.Weapons.Add(new Weapon
+            {
                 Name = "crossbow",
                 Damage = 3
             });
