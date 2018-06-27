@@ -359,7 +359,7 @@ namespace TheAdventureGame
             });
             dragon.Weapons.Add(new Weapon
             {
-                Name = "fire breath",
+                Name = "Fire Breath",
                 Damage = 7
             });
 
