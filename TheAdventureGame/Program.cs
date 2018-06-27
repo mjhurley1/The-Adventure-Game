@@ -49,17 +49,22 @@ namespace TheAdventureGame
             PlayerOne.CharacterClass = Console.ReadLine();
             PlayerOne.Weapons.Add(new Weapon
             {
-                Name = "sword",
+                Name = "Sword",
                 Damage = 2
             });
             PlayerOne.Weapons.Add(new Weapon
             {
-                Name = "warhammer",
+                Name = "Dagger",
+                Damage = 2
+            });
+            PlayerOne.Weapons.Add(new Weapon
+            {
+                Name = "Warhammer",
                 Damage = 4
             });
             PlayerOne.Weapons.Add(new Weapon
             {
-                Name = "crossbow",
+                Name = "Crossbow",
                 Damage = 3
             });
 
