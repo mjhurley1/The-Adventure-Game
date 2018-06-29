@@ -15,7 +15,7 @@
 - ~~Spend time working with the debugger~~
 - ~~Update game flow with more decisions and then implement them (question, choice, if/else - then extract)~~
 
-## 6/26/18
+## 6/27/18
 - ~~Allow the player to have multiple weapons.~~
 - ~~Allow the enemy to have multiple weapons.~~
 - ~~Update the battle service fight method to use the first weapon in the list for the player and the enemy.~~
@@ -26,9 +26,12 @@
 - Find a few weapons on your journey and add them to the player list of weapons.
 - ~~Map "pick" or "leave" in `GoLeft`~~
 
-
-## 6/27/18
+## 6/29/18
 - Allow the player to chose the weapon to use on each turn in the battles service.
 - Radomize the enemy weapoin on each turn in the battle service.
+
+
+## 6/30/18
+
 
 
