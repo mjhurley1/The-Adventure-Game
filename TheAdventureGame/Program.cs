@@ -118,11 +118,11 @@ namespace TheAdventureGame
 
         private static void GoDownTheHole()
         {
-            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of snakes. do you [jump] over it or [light] the entire nest on fire?");
+            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of pit vipers. do you [jump] over it or [light] the entire nest on fire?");
             var choice = Console.ReadLine();
             if (choice.Equals("jump"))
             {
-                Console.WriteLine("you jump over the snakes nest.You lans safely and continue walking until you come to an old wooden staircase. Do you [ascend] the stairs or [descend] the stairs?");
+                Console.WriteLine("you jump over the pit viper nest.You lans safely and continue walking until you come to an old wooden staircase. Do you [ascend] the stairs or [descend] the stairs?");
                 choice = Console.ReadLine();
                 if (choice.Equals("ascend"))
                 {
@@ -139,7 +139,7 @@ namespace TheAdventureGame
                 }
             else if (choice.Equals("light"))
             {
-                Console.WriteLine("you light the nest of snakes on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread] on down the path?");
+                Console.WriteLine("you light the nest of vipers on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread] on down the path?");
                 choice = Console.ReadLine();
                 if (choice.Equals("enter"))
                 {
@@ -460,7 +460,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("The zombie killed you! Your game is now over.");
+                Console.WriteLine("The zombie killed and ate half your body! Your game is now over.");
             }
         }
 
