@@ -195,23 +195,23 @@ namespace TheAdventureGame
                     Health = 8,
                 };
                 scorpion.Weapons.Add(new Weapon {
-                    Name = "stinger",
+                    Name = "barbed stinger",
                     Damage = 4
                 });
                 scorpion.Weapons.Add(new Weapon
                 {
-                    Name = "claws",
+                    Name = "pincer claws",
                     Damage = 3
                 });
 
                 var result = _battleService.Fight(PlayerOne, scorpion);
                 if (result.Equals(BattleResult.PlayerWon))
                 {
-                    Console.WriteLine("You kill the giant scorpion.");
+                    Console.WriteLine("You slay the giant scorpion.");
                 }
                 else
                 {
-                    Console.WriteLine("The giant scorion killed you. Game over!");
+                    Console.WriteLine("The giant scorion cut you in half. You bled out and died. Game over!");
                 }
                 
             }
