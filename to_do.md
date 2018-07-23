@@ -31,7 +31,8 @@
 - Radomize the enemy weapoin on each turn in the battle service.
 
 
-## 6/30/18
+## 07/23/2018
+
 
 
 
