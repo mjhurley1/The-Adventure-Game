@@ -300,18 +300,18 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("walking"))
             {
-                Console.WriteLine("You leave the paper there and keep walkin.");
+                Console.WriteLine("You leave the paper there and keep walkin'.");
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void GoStraight()
         {
             Console.WriteLine("Straight is great!");
-            Console.WriteLine("You discover an antique looking compass that someone apparently lost. Behold! It seems to work! Being in the middle of the no where, we need to figure out if we want to travel [west] or [east]?");
+            Console.WriteLine("You discover an antique looking compass that someone apparently lost. It seems to work! Being in the middle of the no where, we need to figure out if we want to travel [west] or [east]?");
             var choice = Console.ReadLine();
             if (choice.Equals("west"))
             {
@@ -325,7 +325,7 @@ namespace TheAdventureGame
 
         private static void HeadEast()
         {
-            Console.WriteLine("ok, now you're headed East. You come across a rather large, fire breathing dragon. Do you want to [fight] it or [tame] it?");
+            Console.WriteLine("OK, now you're headed East. You come across a rather large, fire breathing dragon. Do you want to [fight] it or [tame] it?");
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
@@ -334,7 +334,7 @@ namespace TheAdventureGame
 
             else if (choice.Equals("tame"))
             {
-                Console.WriteLine("you are now trying to tame the dragon");
+                Console.WriteLine("you are now trying to tame the dragon.");
             }
             else
             {
@@ -344,7 +344,7 @@ namespace TheAdventureGame
 
         private static void FightTheDragon()
         {
-            Console.WriteLine("you are now fighting the dragon. ");
+            Console.WriteLine("You are now fighting the dragon!");
 
             var dragon = new Enemy
             {
@@ -390,7 +390,7 @@ namespace TheAdventureGame
 
         private static void HeadWest()
         {
-            Console.WriteLine("Good job! You're heading West. You come across a zombie. do you [fight] or [retreat]?");
+            Console.WriteLine("Good job! You're heading West. You come across a zombie. Do you [fight] or [retreat]?");
             var choice = Console.ReadLine();
             if (choice.Equals("fight"))
             {
@@ -402,13 +402,13 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void RetreatFromZombie()
         {
-            Console.WriteLine("you have retreated. You run back about 100 yards and come across a rusty sword stuck in the ground. Do you [take] the sword or [leave] it and continue west?");
+            Console.WriteLine("You have retreated. You run back about 100 yards and come across a rusty sword stuck in the ground. Do you [take] the sword or [leave] it and continue west?");
             var choice = Console.ReadLine();
             if (choice.Equals("take"))
             {
@@ -439,7 +439,7 @@ namespace TheAdventureGame
                 Damage = 1
             });
 
-            Console.WriteLine("you are fighting the " + zombie.EnemyClass + " named " + zombie.Name + ".");
+            Console.WriteLine("You are fighting the " + zombie.EnemyClass + " named " + zombie.Name + ".");
             var result = _battleService.Fight(PlayerOne, zombie);
             if (result.Equals(BattleResult.PlayerWon))
             {
@@ -447,7 +447,7 @@ namespace TheAdventureGame
                 var choice = Console.ReadLine();
                 if (choice.Equals("forward"))
                 {
-                    Console.WriteLine("You move forward.");
+                    Console.WriteLine("You move forward!");
                 }
                 else if (choice.Equals("rest"))
                 {
@@ -455,7 +455,7 @@ namespace TheAdventureGame
                 }
                 else
                 {
-                    Console.WriteLine("invalid choice. You died.");
+                    Console.WriteLine("Invalid choice. You died.");
                 }
             }
             else
@@ -476,12 +476,12 @@ namespace TheAdventureGame
                     Damage = 4
                 };
                 PlayerOne.Weapons.Add(battleAxe);
-                Console.WriteLine("You have picked up the battle axe and added it to your inventory");
+                Console.WriteLine("You have picked up the battle axe and added it to your inventory.");
                 ListWeapons();
             }
             else if (choice.Equals("leave"))
             {
-                Console.WriteLine("For some reason you don't another weapon... OK, boss.");
+                Console.WriteLine("For some reason you don't another weapon... OK, boss!");
             }
             else
             {
@@ -512,19 +512,19 @@ namespace TheAdventureGame
 
         private static void WalkPastWizard()
         {
-            Console.WriteLine("The wizard tells you to stop and says only danger is up ahead! Do you [walk] past him or [ask] about the danger");
+            Console.WriteLine("The wizard tells you to stop and says only danger is up ahead! Do you [walk] past him or [ask] about the danger?");
             var choice = Console.ReadLine();
             if (choice.Equals("walk"))
             {
-                Console.WriteLine("you walked past");
+                Console.WriteLine("You walked past.");
             }
             else if (choice.Equals("ask"))
             {
-                Console.WriteLine("you ask about the danger");
+                Console.WriteLine("You ask about the danger.");
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
@@ -542,31 +542,31 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void RunPastWizard()
         {
-            Console.WriteLine("you run past. after a while you come to a fork in the road where you can only head North or South. Do you walk [north] or do you walk [south]");
+            Console.WriteLine("You run past! After a while you come to a fork in the road where you can only head North or South. Do you walk [north] or do you walk [south]?");
             var choice = Console.ReadLine();
             if (choice.Equals("north"))
             {
-                Console.WriteLine("you start walking to the North");
+                Console.WriteLine("You start walking to the North.");
             }
             else if (choice.Equals("south"))
             {
-                Console.WriteLine("you start walking to the Sorth");
+                Console.WriteLine("You start walking to the South.");
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void InquireAboutDanger()
         {
-            Console.WriteLine("you have inquired. He tells you again about the danger up ahead. Do you [heed] his warning or [ignore] and walk past?");
+            Console.WriteLine("You have inquired. He tells you again about the danger up ahead. Do you [heed] his warning or [ignore] and walk past?");
             var choice = Console.ReadLine();
             if (choice.Equals("heed"))
             {
@@ -574,11 +574,11 @@ namespace TheAdventureGame
             }
             else if (choice.Equals("ignore"))
             {
-                Console.WriteLine("you ignore him and walk past.");
+                Console.WriteLine("You ignore him and walk past.");
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
     }
