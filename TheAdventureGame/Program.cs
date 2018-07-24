@@ -92,12 +92,12 @@ namespace TheAdventureGame
                     Damage = 5
                 };
                 PlayerOne.Weapons.Add(mace);
-                Console.WriteLine("You have picked up the mace and added it to your inventory");
+                Console.WriteLine("You have picked up the Mace and added it to your inventory");
                 ListWeapons();
             }
             else
             {
-                Console.WriteLine("Not sure why, but you left it there! Too much weapon for you?");
+                Console.WriteLine("Not sure why, but you left it there! Too much weapon for you?!?!?");
             }
 
             Console.WriteLine("you find a ladder in the road next to a dark hole.  Do you stand the ladder up and go [up] or drop it [down] in the hole?");
@@ -112,17 +112,17 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void GoDownTheHole()
         {
-            Console.WriteLine("you plummet down to the bottom of the hole. You come across a nest of pit vipers. do you [jump] over it or [light] the entire nest on fire?");
+            Console.WriteLine("You plummet down to the bottom of the hole. You come across a nest of pit vipers. do you [jump] over it or [light] the entire nest on fire?");
             var choice = Console.ReadLine();
             if (choice.Equals("jump"))
             {
-                Console.WriteLine("you jump over the pit viper nest.You lans safely and continue walking until you come to an old wooden staircase. Do you [ascend] the stairs or [descend] the stairs?");
+                Console.WriteLine("You jump over the pit viper nest.You lans safely and continue walking until you come to an old wooden staircase. Do you [ascend] the stairs or [descend] the stairs?");
                 choice = Console.ReadLine();
                 if (choice.Equals("ascend"))
                 {
@@ -139,7 +139,7 @@ namespace TheAdventureGame
                 }
             else if (choice.Equals("light"))
             {
-                Console.WriteLine("you light the nest of vipers on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread] on down the path?");
+                Console.WriteLine("You light the nest of vipers on fire and kill 'em all! You continue walking and come across a dark cave opening. Do you [enter] or [tread] on down the path?");
                 choice = Console.ReadLine();
                 if (choice.Equals("enter"))
                 {
@@ -156,17 +156,17 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void AscendStairs()
         {
-            Console.WriteLine("You decide to go up the staircase. At the top you come to a locked door straight ahead and a hallway to the left and to the right? Do you [bust] open the door ahead or walk [leftmost] or go [rightmost]down another hallway?");
+            Console.WriteLine("You decide to go up the staircase. At the top you come to a locked door straight ahead and a hallway to the left and to the right? Do you [break] open the door ahead or walk [leftmost] or go [rightmost]down another hallway?");
             var choice = Console.ReadLine();
-            if (choice.Equals("bust"))
+            if (choice.Equals("break"))
             {
-                Console.WriteLine("You bust down the door.");
+                Console.WriteLine("You break down the door!");
             }
             else if (choice.Equals("leftmost"))
             {
@@ -184,7 +184,7 @@ namespace TheAdventureGame
 
         private static void TreadDownPath()
         {
-            Console.WriteLine("You decide to not enter the cave.Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
+            Console.WriteLine("You decide to not enter the cave. Contining down the path you run into a giant scorpion. Do you [kill] it or [scamper] past it down the path?");
             var choice = Console.ReadLine();
             if (choice.Equals("kill"))
             {
@@ -207,11 +207,11 @@ namespace TheAdventureGame
                 var result = _battleService.Fight(PlayerOne, scorpion);
                 if (result.Equals(BattleResult.PlayerWon))
                 {
-                    Console.WriteLine("You slay the giant scorpion.");
+                    Console.WriteLine("You slay the giant scorpion!");
                 }
                 else
                 {
-                    Console.WriteLine("The giant scorion cut you in half. You bled out and died. Game over!");
+                    Console.WriteLine("The giant scorion has cut you in half. You quickly bled out and died. Game over!");
                 }
                 
             }
@@ -239,13 +239,13 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
         }
 
         private static void FightTheSpider()
         {
-            Console.WriteLine("you are now fighting the giant, stinky angry spider.");
+            Console.WriteLine("You are now fighting the giant, stinky angry spider.");
 
             var spider = new Enemy
             {
@@ -269,7 +269,7 @@ namespace TheAdventureGame
             if (result.Equals(BattleResult.PlayerWon))
             {
                 Console.WriteLine("You killed the spider.");
-                Console.WriteLine("After a lengthy battle, you finally slay the giant spider.Do you now [rest] for a while or keep [strolling] down the path?");
+                Console.WriteLine("After a lengthy battle, you finally slay the giant spider. Do you now [rest] for a while or keep [strolling] down the path?");
                 var choice = Console.ReadLine();
                 if (choice.Equals("rest"))
                 {
@@ -281,7 +281,7 @@ namespace TheAdventureGame
                 }
                 else
                 {
-                    Console.WriteLine("invalid choice. You died.");
+                    Console.WriteLine("Invalid choice. You died.");
                 }
             }
             else
