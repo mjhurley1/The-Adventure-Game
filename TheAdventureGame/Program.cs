@@ -13,7 +13,7 @@ namespace TheAdventureGame
         {
             CharcterCreation();
 
-            Console.WriteLine("Welcome to a Rediculously Boring and Lame Adventure, " + PlayerOne.Name + "!");
+            Console.WriteLine("Welcome to a Rediculous Adventure, " + PlayerOne.Name + "!");
             Console.WriteLine("You have chosen to be a " + PlayerOne.CharacterClass);
 
             Console.WriteLine("You're standing on a road with three different possible directions to walk. Which way would you like to go? [left, right, or straight?]");
@@ -34,7 +34,7 @@ namespace TheAdventureGame
             }
             else
             {
-                Console.WriteLine("invalid choice. You died.");
+                Console.WriteLine("Invalid choice. You died.");
             }
 
             Console.ReadLine();
@@ -73,7 +73,7 @@ namespace TheAdventureGame
 
         private static void ListWeapons()
         {
-            Console.WriteLine("Here is your current weapon inventory:");
+            Console.WriteLine("Here is your current weapon inventory!:");
             foreach(var weapon in PlayerOne.Weapons)
             {
                 Console.WriteLine(weapon.Name);
